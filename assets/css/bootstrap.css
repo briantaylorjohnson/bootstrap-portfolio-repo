@@ -67,17 +67,44 @@ body {
   outline: 0 !important;
 }
 
-footer {
-  background-color: #666666; 
-  color: #cccccc;
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 0.75rem;
+@media (min-width: 768px){
+  footer {
+    background-color: #666666; 
+    color: #cccccc;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 0.75rem;
+    position: relative !important;
+    bottom: 0;
+    display: block;
+  }
 }
 
-.toesocks {
-  background-color: #4AAAA5;
-  height: 8px;
-  width: 100%;
+@media (max-width: 767px){
+  footer {
+    background-color: #666666; 
+    color: #cccccc;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px){
+  .toesocks {
+    background-color: #4AAAA5;
+    height: 8px;
+    position: relative !important;
+  }
+}
+
+@media (max-width: 767px){
+  .toesocks {
+    background-color: #4AAAA5;
+    height: 8px;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+
+  }
 }
 
 hr {
@@ -94,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  line-height: 2rem; 
 }
 
 abbr[title],
@@ -169,10 +197,11 @@ a {
   color: #777777;
   text-decoration: none;
   background-color: transparent;
+  font-size: small;
 }
 
 a:hover {
-  color: #000000;
+  color: #777777;
   text-decoration: none;
 }
 
@@ -405,7 +434,12 @@ h1, h2, h3, h4, h5, h6,
 
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  color: #4aaaa5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold; 
 }
 
 h3, .h3 {
@@ -510,9 +544,21 @@ mark,
   content: "\2014\00A0";
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+@media (max-width: 767px){
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    padding-right: 0px;
+  }
+
+}
+
+@media (min-width: 768px){
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    padding-right: 1rem;
+  }
 }
 
 .img-thumbnail {
@@ -603,7 +649,7 @@ pre code {
 
 @media (max-width: 767px) {
   .container-top {
-    max-width: 540px;
+    max-width: 100%;
     padding-right: 0px;
     padding-left: 0px;
     border-style: none;
@@ -1130,7 +1176,7 @@ pre code {
   .col-md-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: -webkit-fill-available;
   }
   .order-md-first {
     -ms-flex-order: -1;
