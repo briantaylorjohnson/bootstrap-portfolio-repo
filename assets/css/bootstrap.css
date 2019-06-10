@@ -194,10 +194,14 @@ sup {
 }
 
 a {
-  color: #777777;
   text-decoration: none;
-  background-color: transparent;
-  font-size: small;
+}
+
+.nav-stuff{
+color: #777777;
+text-decoration: none;
+background-color: transparent;
+font-size: small;
 }
 
 a:hover {
@@ -220,6 +224,8 @@ a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
 a:not([href]):not([tabindex]):focus {
   outline: 0;
 }
+
+
 
 pre,
 code,
