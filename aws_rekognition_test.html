@@ -89,7 +89,10 @@ PDX-License-Identifier: MIT-0 (For details, see https://github.com/awsdocs/amazo
   //Provides anonymous log on to AWS services
   function AnonLog()
   {
-  
+    var data = { UserPoolId : 'us-east-1_Iqc12345',
+        ClientId : '12345du353sm7khjj1q'
+    };
+    var userPool = new AmazonCognitoIdentity.CognitoUserPool(data);
     var cognitoUser = userPool.getCurrentUser();
 
     if (cognitoUser != null)
