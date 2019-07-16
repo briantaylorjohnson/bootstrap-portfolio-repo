@@ -106,7 +106,8 @@ PDX-License-Identifier: MIT-0 (For details, see https://github.com/awsdocs/amazo
 			// Add the User's Id Token to the Cognito credentials login map.
 			AWS.config.credentials = new AWS.CognitoIdentityCredentials(
         {
-				  IdentityPoolId: 'us-east-2:7359eb59-58a3-4653-98f7-8e4d06680409',
+				  Region: 'us-east-1',
+          IdentityPoolId: 'us-east-2:7359eb59-58a3-4653-98f7-8e4d06680409',
             Logins: {
               'cognito-idp.us-east-1.amazonaws.com/us-east-1_1aKXfveNd': result.getIdToken().getJwtToken()
             }
