@@ -25,7 +25,7 @@ PDX-License-Identifier: MIT-0 (For details, see https://github.com/awsdocs/amazo
   
   //Calls DetectLabels API and displays keywords for image uploaded along with level of confidence
   function DetectLabels(imageData) {
-    AWS.region = "us-east-2";
+    AWS.region = "us-east-1";
     var rekognition = new AWS.Rekognition();
     var params = {
       Image: {
